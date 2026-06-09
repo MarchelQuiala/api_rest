@@ -1,0 +1,106 @@
+### ============================================
+### TESTES COMPLETOS DA API CRUD
+### ============================================
+
+### 1. GET - Rota inicial (info da API)
+GET http://localhost:3000/
+
+### ============================================
+
+### 2. GET - Listar todos os usuários
+GET http://localhost:3000/api/usuarios
+
+### ============================================
+
+### 3. GET - Buscar usuário específico (ID 1)
+GET http://localhost:3000/api/usuarios/1
+
+### ============================================
+
+### 4. GET - Buscar usuário específico (ID 2)
+GET http://localhost:3000/api/usuarios/2
+
+### ============================================
+
+### 5. POST - Criar novo usuário
+POST http://localhost:3000/api/usuarios
+Content-Type: application/json
+
+{
+  "nome": "Ana Silva",
+  "email": "ana@email.com"
+}
+
+### ============================================
+
+### 6. POST - Criar outro usuário
+POST http://localhost:3000/api/usuarios
+Content-Type: application/json
+
+{
+  "nome": "Pedro Santos",
+  "email": "pedro@email.com"
+}
+
+### ============================================
+
+### 7. POST - Tentar criar sem nome (deve dar erro)
+POST http://localhost:3000/api/usuarios
+Content-Type: application/json
+
+{
+  "email": "semnome@email.com"
+}
+
+### ============================================
+
+### 8. PUT - Atualizar usuário completo (ID 1)
+PUT http://localhost:3000/api/usuarios/1
+Content-Type: application/json
+
+{
+  "nome": "João Silva Atualizado",
+  "email": "joao.novo@email.com"
+}
+
+### ============================================
+
+### 9. PATCH - Atualizar apenas o nome (ID 2)
+PATCH http://localhost:3000/api/usuarios/2
+Content-Type: application/json
+
+{
+  "nome": "Maria Atualizada"
+}
+
+### ============================================
+
+### 10. PATCH - Atualizar apenas o email (ID 2)
+PATCH http://localhost:3000/api/usuarios/2
+Content-Type: application/json
+
+{
+  "email": "maria.novo@email.com"
+}
+
+### ============================================
+
+### 11. DELETE - Remover usuário (ID 3)
+DELETE http://localhost:3000/api/usuarios/3
+
+### ============================================
+
+### 12. GET - Verificar resultado após as alterações
+GET http://localhost:3000/api/usuarios
+
+### ============================================
+
+### 13. GET - Tentar buscar ID que não existe (deve dar erro 404)
+GET http://localhost:3000/api/usuarios/999
+
+### ============================================
+
+### 14. DELETE - Tentar deletar ID que não existe (deve dar erro)
+DELETE http://localhost:3000/api/usuarios/999
+
+### ============================================
