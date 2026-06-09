@@ -1,0 +1,19 @@
+{
+  "name": "minha_api",
+  "version": "1.0.0",
+  "description": "API CRUD completa com Node.js e Express",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js"
+  },
+  "keywords": ["api", "crud", "express", "node", "rest"],
+  "author": "Seu Nome",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
